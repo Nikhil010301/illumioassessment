@@ -80,9 +80,9 @@ with open('output.txt', 'w') as output_file:
     for (port, protocol), count in count_combination.items():
         output_file.write(f"{port},{protocol},{count}\n")
 
-# Printing for testing purposes
-print("Tag Counts:", count_tag)
-print("Port/Protocol Combination Counts:", count_combination)
+# # Printing for testing purposes
+# print("Tag Counts:", count_tag)
+# print("Port/Protocol Combination Counts:", count_combination)
 
 
 
@@ -95,72 +95,3 @@ print("Port/Protocol Combination Counts:", count_combination)
 
 
 
-
-
-
-# lookup={}
-# count_tag={}
-# count_combination={}
-# with open('lookup.csv', 'r') as file:
-#     data = file.readlines()
-
-
-# for line in data[1:]:
-#     row = line.strip().split(',')
-#     lookup[row[0]+row[1]]=row[2]
-
-
-# with open('sample.txt', 'r') as file:
-#     data = file.readlines()
-
-# for line in data:
-#     row = line.strip().split(' ')
-#     src_port = row[5]
-#     dst_port = row[6]
-#     if str(row[7])=="6":
-#         protocol="tcp"
-#     elif str(row[7])=="17":
-#         protocol="udp"
-#     elif str(row[7])=="1":
-#         protocol="icmp"
-#     elif str(row[7])=="2":
-#         protocol="igmp"
-#     else:
-#         protocol="untagged"
-        
-        
-#     if dst_port+protocol in lookup.keys():
-#         tag=lookup[dst_port+protocol]
-#     else:
-#         tag="Untagged"
-        
-#     if tag in count_tag.keys():
-#         count_tag[tag]+=1
-#     else:
-#         count_tag[tag]=1
-
-#     comb=(src_port,protocol)
-#     if comb in count_combination.keys():
-#         count_combination[comb]+=1
-#     else:
-#         count_combination[comb]=1
-    
-
-#     if src_port+protocol in lookup.keys():
-#         tag=lookup[src_port+protocol]
-#     else:
-#         tag="Untagged"
-#     if tag in count_tag.keys():
-#         count_tag[tag]+=1
-#     else:
-#         count_tag[tag]=1
-        
-#     comb=(src_port,protocol)
-#     if comb in count_combination.keys():
-#         count_combination[comb]+=1
-#     else:
-#         count_combination[comb]=1
-    
-    
-# print(count_tag)
-# print(count_combination)

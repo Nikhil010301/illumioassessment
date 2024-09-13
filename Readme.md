@@ -1,8 +1,8 @@
-# AWS Flow Log Parser with Tag Lookup
+# Flow Log Parser with Tag Lookup
 
 ## Overview
 
-This program parses AWS flow logs and assigns tags to each log entry based on a lookup table (`lookup.csv`). The tags are applied based on the destination port (`dstport`) and protocol (`tcp`, `udp`, etc.`) combination, as defined in the CSV lookup table. The program also generates counts for each tag and the combinations of port/protocol seen in the flow logs.
+This program parses AWS flow logs and assigns tags to each log entry based on a lookup table (`lookup.csv`). The tags are applied based on the destination port (`dstport`) and protocol (`tcp`, `udp`, `icmp`.`igmp`) combination, as defined in the CSV lookup table. The program also generates counts for each tag and the combinations of port/protocol seen in the flow logs.
 
 ## Assumptions
 
@@ -93,9 +93,12 @@ The program generates an `output.txt` file containing two sections:
 
 ## Instructions to Run the Program
 
-1. **Clone the repository**:
+1. **Clone the repository**: In your terminal clone my repository:
+```
+git clone https://github.com/Nikhil010301/illumioassessment.git
+```
 
-2. **Place your input files**: Ensure that `flowlogs.txt` (flow log file), `lookup.csv` (lookup table), and `Illumio.py` (Python script) are present in the same directory.
+2. **Place your input files**: Ensure that `flowlogs.txt` (flow log file), `lookup.csv` (lookup table), and `Illumio.py` (Python script) are present in the same directory. When you give your own csv and txt files, make sure you change the name of the files to `flowlogs.txt` and `lookup.csv`.
 
 3. **Run the Python script**: Run the program in terminal:
 ```
