@@ -2,7 +2,7 @@
 
 ## Overview
 
-This program parses AWS flow logs and assigns tags to each log entry based on a lookup table (`lookup.csv`). The tags are applied based on the destination port (`dstport`) and protocol (`tcp`, `udp`, `icmp`.`igmp`) combination, as defined in the CSV lookup table. The program also generates counts for each tag and the combinations of port/protocol seen in the flow logs.
+This program parses AWS flow logs and assigns tags to each log entry based on a lookup table (`lookup.csv`). The tags are applied based on the destination port (`dstport`) and protocol (`tcp`, `udp`, `icmp`, `igmp`) combination, as defined in the CSV lookup table. The program also generates counts for each tag and the combinations of port/protocol seen in the flow logs.
 
 ## Assumptions
 
