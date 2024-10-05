@@ -10,7 +10,7 @@ This program parses AWS flow logs and assigns tags to each log entry based on a 
 
 - **Log Format**: The program supports default AWS flow logs. Custom log formats are not supported.
 
-- **Log Fields**: The program expects a flow log entry to have the following structure:
+- **Log Fields**: This program expects a flow log entry to have the following structure:
 
 **Syntax**:
   ```plaintext
